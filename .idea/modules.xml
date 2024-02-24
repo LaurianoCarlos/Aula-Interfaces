@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Exercicio03.iml" filepath="$PROJECT_DIR$/Exercicio03.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProjetoCarroAutonomo/ProjetoCarroAutonomo.iml" filepath="$PROJECT_DIR$/ProjetoCarroAutonomo/ProjetoCarroAutonomo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProjetoTanqueRobo/ProjetoTanqueRobo.iml" filepath="$PROJECT_DIR$/ProjetoTanqueRobo/ProjetoTanqueRobo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Threads/Threads.iml" filepath="$PROJECT_DIR$/Threads/Threads.iml" />
     </modules>
   </component>
 </project>

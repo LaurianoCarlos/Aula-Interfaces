@@ -1,15 +1,66 @@
-1. São soluções que representam técnicas bem sucedidas e podem ser aplicadas em problemas similares. Mas um padrão 
-de projeto não garante uma solução ótima, pois, um padrão de projeto é mais genérico do que específico.
+# Padrões de Projeto em Desenvolvimento de Software
 
+## 1. Natureza Genérica dos Padrões de Projeto
 
-2. Os padrões arquiteturais tratam da estrutura global de um sistema, enquanto os design patterns lidam com soluções 
-específicas para problemas de design em nível de código. Ambos são importantes para desenvolver software eficiente,
-modular e fácil de manter.
+Padrões de projeto representam técnicas bem-sucedidas aplicáveis a problemas similares. Entretanto, é importante notar que um padrão de projeto não garante uma solução ótima, pois é mais genérico do que específico.
 
-3. Os design patterns mencionados na conversa são o Método Fábrica, proposto pelo Programador 1 para refatoração, 
-e a Composição e Fachada, sugeridas pelo Programador 2 para implementar uma estrutura hierárquica e simplificar a
-interação na classe cliente.
+## 2. Diferença entre Padrões Arquiteturais e Design Patterns
 
-4. O padrão Singleton garante uma única instância de uma classe, proporcionando acesso global controlado.
-Sua característica fundamental é a criação única da instância, geralmente com inicialização tardia, permitindo
-manutenção de um estado global e controle preciso sobre o acesso à instância.
+Os padrões arquiteturais concentram-se na estrutura global de um sistema, enquanto os design patterns lidam com soluções específicas para problemas de design em nível de código. Ambos são cruciais para desenvolver software eficiente, modular e fácil de manter.
+
+## 3. Design Patterns em Conversas de Desenvolvimento
+
+Na conversa entre programadores, foram mencionados design patterns como o Método Fábrica para refatoração proposto pelo Programador 1, e a Composição e Fachada sugeridas pelo Programador 2 para estrutura hierárquica e simplificação na interação da classe cliente.
+
+## 4. Padrão Singleton
+
+O padrão Singleton assegura uma única instância de uma classe, oferecendo acesso global controlado. A criação da instância é única, geralmente com inicialização tardia, permitindo a manutenção de um estado global e controle preciso sobre o acesso à instância.
+
+## 5. Método configuracoes
+
+```java
+
+public class Cenario {
+private static Cenario cenario=null;
+
+    private Cenario(){}
+
+    public static Cenario getCenario(){
+        if(cenario==null)
+            cenario=new Cenario();
+
+        return cenario;
+    }
+
+    public  void configuracoes(){
+        System.out.println("Olá");
+    }
+}
+```
+
+##  6.  Lazy Singleton
+```java
+package singleton;
+
+public class LazySingleton {
+    private static LazySingleton lazySingleton;
+    private static final int MAX_INSTANCE = 3;
+    private static int instanceCount = 0;
+
+   private LazySingleton() {
+
+    }
+
+    public static LazySingleton getLazySingleton() {
+        if (lazySingleton == null){
+            lazySingleton = new LazySingleton();
+            instanceCount++;
+            return lazySingleton;
+        } else if (instanceCount < MAX_INSTANCE){
+            instanceCount++;
+            return lazySingleton;
+        }
+        return null;
+    }
+}
+```

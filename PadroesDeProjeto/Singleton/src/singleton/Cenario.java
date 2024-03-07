@@ -1,4 +1,18 @@
 package singleton;
 
-public class SingletonTwo {
+public class Cenario {
+    private static Cenario cenario=null;
+
+    private Cenario(){}
+
+    public static Cenario getCenario(){
+        if(cenario==null)
+            cenario=new Cenario();
+
+        return cenario;
+    }
+
+    public  void configuracoes(){
+        System.out.println("Olá");
+    }
 }
